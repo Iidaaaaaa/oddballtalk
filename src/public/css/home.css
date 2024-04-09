@@ -1,0 +1,341 @@
+body {
+  background: #d8dee6;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  overflow: auto;
+}
+
+.profileCard {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.profileCard .topText {
+  width: 100%;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  background-color: #fff;
+}
+.profileCard .topText span {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-image: url("../images/topstarimage.svg");
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.profileCard .topText p {
+  color: #2b7fe1;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.profileCard .topText .gradationText {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 11.8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0.13%, #fff 99.79%);
+}
+.profileCard .card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  width: 100%;
+  height: 60rem;
+}
+
+.profileCard .card .profileContent {
+  width: 100%;
+  height: 60rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.profileCard .profileContent .profileImg {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.profileCard .profileContent .profileImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profileCard .profileContent .profileInfo {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-image: url("../images/bioBackgr.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: -25px;
+  padding: 16px;
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.profileCard .card .bioDesCard {
+  width: 100%;
+  height: calc(60rem - 2.5rem);
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background: url("../images/bioDesCardBg.png") no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5rem 4.8rem 0 4.8rem;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.userIcon {
+  flex-basis: 8rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 2rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  top: -25px;
+}
+.userIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bio {
+  flex-basis: calc(100% - 8rem);
+  width: 250px;
+  height: auto;
+  padding-left: 1.2rem;
+}
+.profileTag {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  margin-top: 4rem;
+}
+.tag {
+  width: auto;
+  height: 2.6rem;
+  background-image: url("../images/tag-backgr.png");
+  background-size: 100% 100%;
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  letter-spacing: 0.15rem;
+}
+.tag:nth-child(1) {
+  top: -11rem;
+  left: -1rem;
+  transform: rotate(-12deg);
+}
+.tag:nth-child(2) {
+  top: -7rem;
+  left: 0;
+  transform: rotate(6.615deg);
+}
+.name {
+  color: #fff;
+  font-family: "A P-OTF A1Gothic Std";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-top: -7px;
+}
+.name span {
+  color: #d1d1d1;
+  font-family: "A P-OTF A1Gothic Std";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-left: 0.5rem;
+}
+.desTitle {
+  color: #fff;
+  font-family: "A P-OTF A1Gothic Std";
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-top: 15px;
+  letter-spacing: 0.15rem;
+}
+.bio .des1 {
+  color: #ccc;
+  font-family: "A P-OTF A1Gothic StdN";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  margin-top: 5px;
+  letter-spacing: 0.15rem;
+  word-wrap: break-word;
+}
+
+.bioDesCard .title {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  word-wrap: break-word;
+  line-height: 2.2rem;
+}
+.bioDesCard .des2 {
+  color: #ccc;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+.buttonBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  margin-top: 25px;
+  top: -50px;
+  padding-right: 2rem;
+}
+.buttonBox div {
+  cursor: pointer;
+}
+.like {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-image: url("../images/likeBtn-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+}
+.match {
+  width: 17.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+  background-image: url("../images/matchButton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Footer CSS */
+footer {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  background: #627c9b;
+}
+footer nav {
+  width: 100%;
+  height: 100%;
+}
+footer nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer nav ul li {
+  list-style: none;
+  flex-basis: 25%;
+  height: 100%;
+}
+footer nav ul li a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer nav ul li a i {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 0.2rem;
+}
+footer nav ul li a span {
+  color: #fff;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+footer nav ul li:nth-child(1) a i {
+  background-image: url("../images/footer-home-icon-active.svg");
+}
+footer nav ul li:nth-child(2) a i {
+  background-image: url("../images/footer-mess-icon.svg");
+}
+footer nav ul li:nth-child(3) a i {
+  background-image: url("../images/footer-home-noti.svg");
+}
+footer nav ul li:nth-child(4) a i {
+  background-image: url("../images/footer-home-profile.svg");
+}
+.active {
+  background: linear-gradient(
+      59deg,
+      rgba(180, 213, 223, 0) 7.96%,
+      rgba(92, 196, 229, 0.5) 72.93%
+    ),
+    linear-gradient(69deg, #2b7fe1 18.89%, #5d93d3 77.1%);
+  border-radius: 1rem 1rem 0rem 0rem;
+}

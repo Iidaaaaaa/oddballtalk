@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="file" id="file" accept="image/*" />
+		<button id="upload">Upload</button>
+		<img id="image" />
+		<script>
+			document.getElementById("upload").addEventListener("click", function () {
+				var fileInput = document.getElementById("file");
+				var file = fileInput.files[0];
+				var formData = new FormData();
+				formData.append("image", file);
+
+				fetch("/abc/upload", {
+					method: "POST",
+					body: formData,
+				})
+					.then((response) => response.text())
+					.then((url) => {
+						document.getElementById("image").src = url;
+					})
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			});
+		</script>
+	</body>
+</html>

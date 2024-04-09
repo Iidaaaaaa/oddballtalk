@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>プロフィールを作成</title>
+		<link rel="stylesheet" href="/css/ress.css" />
+		<link rel="stylesheet" href="/css/create-profile.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="inner">
+				<div class="headline_all">
+					<div class="headline_icon"></div>
+					<p class="headline">あなたの趣味を語ろう</p>
+					<img
+						class="headline_icon_decoration"
+						src="/images/headline_icon.svg"
+						alt=""
+					/>
+				</div>
+				<section class="create_area">
+					<div class="profile_all">
+						<img class="profile_icon" src="" alt="" />
+						<article class="profile_name">
+							<div class="name_all">
+								<input class="name" type="text" value="あったかい"></input>
+								<img src="/images/pen.svg" alt="" />
+							</div>
+						</article>
+					</div>
+				</section>
+				<article>
+					<input class="title" type="text" placeholder="タイトル">
+					</input>
+					<div class="image_select">
+						<p>画像を選ぶ</p>
+						<input type="file" class="image_upload" accept="image/*" />
+					</div>
+					<div class="hobby_select" contenteditable="true"><span>あなたの趣味を語ろう</span></div>
+				</article>
+				<article class="tagall">
+					<input type="text" class="tag_text" placeholder="#検索ワード"></input>
+					<input type="text" class="tag_text" placeholder="#検索ワード"></input>
+				</article>
+				<button class="ok">準備OK</button>
+			</div>
+		</main>
+		<footer>
+			<nav>
+				<ul>
+					<li>
+						<a href="/home"><i></i><span>ホーム</span></a>
+					</li>
+					<li>
+						<a href="/chat"><i></i><span>メッセージ</span></a>
+					</li>
+					<li>
+						<a href="/notification"><i></i><span>通知</span></a>
+					</li>
+					<li class="active">
+						<a href="/profile"><i></i><span>プロフィール</span></a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+		<script src="/js/create-profile.js"></script>
+	</body>
+</html>
